@@ -69,12 +69,11 @@ function createBoard(){
 function checkMatch(){
     const cards=document.querySelectorAll('#grid img')
     if(cardsChosenIDs[0]==cardsChosenIDs[1]){
-        alert("Don't do this")
         cards[cardsChosenIDs[0]].setAttribute("src","images/blank.png")
         cards[cardsChosenIDs[1]].setAttribute("src","images/blank.png")
     }
 
-    if(cardsChosen[0]==cardsChosen[1]){
+    else if(cardsChosen[0]==cardsChosen[1]){
         cards[cardsChosenIDs[0]].setAttribute("src","images/white.png")
         cards[cardsChosenIDs[1]].setAttribute("src","images/white.png")
         cards[cardsChosenIDs[0]].removeEventListener("click",flipCard)
